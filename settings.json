@@ -1,0 +1,24 @@
+{
+    "editor.wordWrap": "on",
+    "editor.fontSize": 13,
+    "files.exclude": {
+        "**/*.aux": true,
+        "**/*.log": true,
+        "**/*.pdf": true,
+        "**/*.fls": true,
+        "**/*.fdb_latexmk": true,
+        "**/*.synctex.gz": true,
+        ".gitignore": true, //gitignore
+    },
+    
+    "search.exclude": {
+        "**/*.aux": true,
+        "**/*.log": true,
+        "**/*.pdf": true,
+        "**/*.fls": true,
+        "**/*.fdb_latexmk": true,
+        "**/*.synctex.gz": true,
+        ".gitignore": true,
+    },
+    
+}
