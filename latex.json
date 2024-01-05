@@ -1,0 +1,16 @@
+{
+	"Itemized List": {
+	  "prefix": "item",
+	  "body": [
+		"\\begin{itemize}",
+		"\t\\item $1",
+		"\\end{itemize}"
+	  ],
+	  "description": "Inserts itemized list"
+	},
+	"Highlight Text": {
+	  "prefix": "hl",
+	  "body": ["\\hl{$1}"],
+	  "description": "Inserts \\hl{} with placeholder text"
+	}
+}
