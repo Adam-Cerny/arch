@@ -1,0 +1,18 @@
+[
+    {
+        "key": "ctrl+e",
+        "command": "editor.action.insertSnippet",
+        "when": "editorTextFocus && resourceLangId == latex",
+        "args": {
+            "name": "Itemized List"
+        }
+    },
+    {
+        "key": "ctrl+d",
+        "command": "editor.action.insertSnippet",
+        "when": "editorTextFocus && resourceLangId == latex",
+        "args": {
+            "name": "Highlight Text"
+        }
+    }
+]
