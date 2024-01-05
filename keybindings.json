@@ -1,18 +1,19 @@
 [
     {
-        "key": "ctrl+e",
-        "command": "editor.action.insertSnippet",
-        "when": "editorTextFocus && resourceLangId == latex",
-        "args": {
-            "name": "Itemized List"
-        }
+      "key": "ctrl+d",
+      "command": "editor.action.insertSnippet",
+      "when": "editorLangId == latex",
+      "args": {
+        "snippet": "\\textbf{$0}"
+      }
     },
     {
-        "key": "ctrl+d",
-        "command": "editor.action.insertSnippet",
-        "when": "editorTextFocus && resourceLangId == latex",
-        "args": {
-            "name": "Highlight Text"
-        }
+      "key": "ctrl+e",
+      "command": "editor.action.insertSnippet",
+      "when": "editorLangId == latex",
+      "args": {
+        "snippet": "\\begin{itemize}\n\t\\item $0\n\\end{itemize}"
+      }
     }
-]
+  ]
+  
