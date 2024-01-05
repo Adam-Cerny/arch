@@ -8,9 +8,9 @@
 	  ],
 	  "description": "Inserts itemized list"
 	},
-	"Highlight Text": {
-	  "prefix": "hl",
-	  "body": ["\\hl{$1}"],
-	  "description": "Inserts \\hl{} with placeholder text"
+	"Bold Text": {
+	  "prefix": "textbf",
+	  "body": ["\\textbf{$1}"],
+	  "description": "Inserts \\textbf{} with placeholder text"
 	}
 }
