@@ -1,16 +1,1 @@
-{
-	"Itemized List": {
-	  "prefix": "item",
-	  "body": [
-		"\\begin{itemize}",
-		"\t\\item $1",
-		"\\end{itemize}"
-	  ],
-	  "description": "Inserts itemized list"
-	},
-	"Bold Text": {
-	  "prefix": "textbf",
-	  "body": ["\\textbf{$1}"],
-	  "description": "Inserts \\textbf{} with placeholder text"
-	}
-}
+
