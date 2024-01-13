@@ -1,26 +1,42 @@
 [
-  {
-      "key": "ctrl+d",
-      "command": "editor.action.insertSnippet",
-      "when": "editorLangId == latex",
-      "args": {
-          "snippet": "\\textbf{$0}"
-      }
-  },
-  {
-      "key": "ctrl+e",
-      "command": "editor.action.insertSnippet",
-      "when": "editorLangId == latex",
-      "args": {
-          "snippet": "\\begin{itemize}\n\t\\item $0\n\\end{itemize}"
-      }
-  },
-  {
-      "key": "ctrl+l",
-      "command": "editor.action.insertSnippet",
-      "when": "editorLangId == latex",
-      "args": {
-          "snippet": "\\centering\n\\huge\n\\textbf{$1}\n\\normalsize\n\\raggedright\n\\vspace{12pt}\n\\renewcommand{\\thesection}{\\arabic{section}}"
-      }
-  }
+    {
+        "key": "F1",
+        "command": "editor.action.insertSnippet",
+        "when": "editorLangId == latex",
+        "args": {
+            "snippet": "\\textbf{$0}"
+        }
+    },
+    {
+        "key": "F2",
+        "command": "editor.action.insertSnippet",
+        "when": "editorLangId == latex",
+        "args": {
+            "snippet": "\\begin{itemize}\n\t\\item $0\n\\end{itemize}"
+        }
+    },
+    {
+        "key": "F3",
+        "command": "editor.action.insertSnippet",
+        "when": "editorLangId == latex",
+        "args": {
+            "snippet": "\\item $0"
+        }
+    },
+    {
+        "key": "F4",
+        "command": "editor.action.insertSnippet",
+        "when": "editorLangId == latex",
+        "args": {
+            "snippet": "\\subsection*{$0}"
+        }
+    },
+    {
+        "key": "F5",
+        "command": "editor.action.insertSnippet",
+        "when": "editorLangId == latex",
+        "args": {
+            "snippet": "\\centering\n\\huge\n\\textbf{$1}\n\\normalsize\n\\raggedright\n\\vspace{12pt}\n\\renewcommand{\\thesection}{\\arabic{section}}"
+        }
+    }
 ]
