@@ -4,7 +4,7 @@
         "command": "editor.action.insertSnippet",
         "when": "editorLangId == latex",
         "args": {
-            "snippet": "\\textbf{$0}"
+            "snippet": "\\textbf{${TM_SELECTED_TEXT}$0}"
         }
     },
     {
@@ -20,7 +20,7 @@
         "command": "editor.action.insertSnippet",
         "when": "editorLangId == latex",
         "args": {
-            "snippet": "\\item $0"
+            "snippet": "\\item ${1:$TM_SELECTED_TEXT}$0"
         }
     },
     {
@@ -28,7 +28,7 @@
         "command": "editor.action.insertSnippet",
         "when": "editorLangId == latex",
         "args": {
-            "snippet": "\\subsection*{$0}"
+            "snippet": "\\subsection*{${TM_SELECTED_TEXT}$0}"
         }
     },
     {
@@ -36,7 +36,7 @@
         "command": "editor.action.insertSnippet",
         "when": "editorLangId == latex",
         "args": {
-            "snippet": "\\centering\n\\huge\n\\textbf{$1}\n\\normalsize\n\\raggedright\n\\vspace{12pt}\n\\renewcommand{\\thesection}{\\arabic{section}}"
+            "snippet": "\\centering\n\\huge\n\\textbf{${1:$TM_SELECTED_TEXT}}\n\\normalsize\n\\raggedright\n\\vspace{12pt}\n\\renewcommand{\\thesection}{\\arabic{section}}"
         }
     }
 ]
