@@ -1,0 +1,75 @@
+# Function to display current volume
+vol() {
+    # Display current volume percentage
+    current_volume=$(amixer get Master | awk '/Mono:/{print $4}' | tr -d '[]%')
+
+    # Set color based on current volume
+    if [ "$current_volume" = "0" ]; then
+        color="\e[31m"  # Red for 0% volume
+    else
+        color="\e[32m"  # Green for more than 0% volume
+    fi
+
+    echo -e "Current volume: ${color}$current_volume%\e[0m"
+}
+
+# Function to increase volume by a specified percentage
+vol+() {
+    # Extract numeric part from the argument
+    percentage=$(echo "$1" | tr -cd '0-9')
+
+    if [ "$percentage" -gt 0 ]; then
+        amixer set Master "$percentage%+" > /dev/null
+    fi
+
+    # Display current volume percentage
+    vol
+}
+
+# Function to decrease volume by a specified percentage
+vol-() {
+    # Extract numeric part from the argument
+    percentage=$(echo "$1" | tr -cd '0-9')
+
+    if [ "$percentage" -gt 0 ]; then
+        amixer set Master "$percentage%-" > /dev/null
+    fi
+
+    # Display current volume percentage
+    vol
+}
+
+battery() {
+    # Battery percentage
+    percentage=$(acpi | awk '{print $4}' | tr -d '%,')
+    echo "Percentage: $percentage%"
+
+    # Battery status (Charging or Discharging)
+    status=$(acpi | awk '{print tolower($3)}' | tr -d ',')
+
+    if [ "$status" = "charging" ]; then
+        color="\e[32m"  # Green for charging
+    else
+        color="\e[31m"  # Red for discharging
+    fi
+
+    echo -e "Status: ${color}$status\e[0m"
+}
+
+
+wifi() {
+    status=$(iwgetid -r)
+
+    if [ -n "$status" ]; then
+        color="\e[32m"  # Green for connected
+        status="connected"
+	echo -e "Status: ${color}$status\e[0m"
+	network_name=$(iwgetid -r)
+        echo "Network Name: $network_name"
+    else
+        color="\e[31m"  # Red for disconnected
+        status="disconnected"
+	echo -e "Status: ${color}$status\e[0m"
+    fi
+}
+    
