@@ -28,12 +28,12 @@
     "editor.snippetSuggestions": "top",
     "editor.suggest.filterGraceful": false,
     "editor.suggestSelection": "first",
-    "editor.wordBasedSuggestions": "off",
+    "editor.wordBasedSuggestions": "allDocuments",
     "editor.suggest.insertMode": "replace",
     "editor.suggest.showWords": false,
-    "editor.suggest.showKeywords": false,
+    "editor.suggest.showKeywords": true,
     "editor.suggest.showSnippets": true,
     "editor.suggest.showConstants": false,
-    "editor.suggest.showUsers": false  
+    "editor.suggest.showUsers": false,
+    "git.openRepositoryInParentFolders": "never"
 }
-
