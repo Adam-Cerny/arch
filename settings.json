@@ -20,5 +20,20 @@
         "**/*.synctex.gz": true,
         ".gitignore": true,
     },
-    
+    "git.confirmSync": false,
+    "git.autofetch": true,
+    "git.enableSmartCommit": true,
+    "explorer.confirmDelete": false,
+    "editor.acceptSuggestionOnEnter": "on",
+    "editor.snippetSuggestions": "top",
+    "editor.suggest.filterGraceful": false,
+    "editor.suggestSelection": "first",
+    "editor.wordBasedSuggestions": "off",
+    "editor.suggest.insertMode": "replace",
+    "editor.suggest.showWords": false,
+    "editor.suggest.showKeywords": false,
+    "editor.suggest.showSnippets": true,
+    "editor.suggest.showConstants": false,
+    "editor.suggest.showUsers": false  
 }
+
