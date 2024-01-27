@@ -1,0 +1,64 @@
+{
+  "latexSnippets": {
+    "Itemize Environment": {
+      "prefix": "item",
+      "body": [
+        "\\begin{itemize}",
+        "\t\\item $1",
+        "\\end{itemize}",
+      ],
+      "description": "Create an itemize environment"
+    },
+    "Enumerate Environment": {
+      "prefix": "enum",
+      "body": [
+        "\\begin{enumerate}",
+        "\t\\item $1",
+        "\\end{enumerate}",
+      ],
+      "description": "Create an enumerate environment"
+    },
+    "Bold Text": {
+      "prefix": "bf",
+      "body": [
+        "\\textbf{${TM_SELECTED_TEXT}}"
+      ],
+      "description": "Make text bold with \\textbf{}"
+    },
+    "Custom Header": {
+      "prefix": "head",
+      "body": [
+        "\\newpage",
+        "\\centering",
+        "\\huge",
+        "\\textbf{${1}}",
+        "\\normalsize",
+        "\\vspace{12pt}",
+        "\\renewcommand{\\thesection}{\\arabic{section}}",
+        "\\raggedright",
+      ],
+      "description": "Customize page header"
+    },
+    "Item": {
+      "prefix": "it",
+      "body": [
+        "\\item $1"
+      ],
+      "description": "Insert \\item in a list"
+    },
+    "Section": {
+      "prefix": "sec",
+      "body": [
+        "\\section*{${1:Section Title}}"
+      ],
+      "description": "Insert \\section"
+    },
+    "Subsection": {
+      "prefix": "ssec",
+      "body": [
+        "\\subsection*{${1:Subsection Title}}"
+      ],
+      "description": "Insert \\subsection"
+    }
+  }
+}
