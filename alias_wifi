@@ -1,0 +1,16 @@
+wifi() {
+    # Wifi status (Connected or Disconnected)
+    status=$(iwgetid -r)
+    
+    if [ -n "$status" ]; then
+        color="\e[32m"  # Green for Connected
+        status="connected"
+	echo -e "Status: ${color}$status\e[0m"
+	network_name=$(iwgetid -r)
+    echo "Network Name: $network_name" # Print Network Name when Connected
+    else
+        color="\e[31m"  # Red for Disconnected
+        status="disconnected"
+	echo -e "Status: ${color}$status\e[0m"
+    fi
+}
