@@ -1,0 +1,29 @@
+battery() {
+    # Battery percentage
+    percentage=$(acpi | awk '{print $4}' | tr -d '%,')
+    echo "Percentage: $percentage%"
+
+    # Battery status (Charging, Discharging or Full)
+    status=$(acpi | awk '{print tolower($3)}' | tr -d ',')
+
+    if [ "$status" = "full" ]; then
+        color="\e[32m"  # Green for full
+        echo -e "Status: ${color}$status\e[0m"
+    fi
+    
+    if [ "$status" = "charging" ]; then
+        color="\e[33m"  # Orange for charging
+        # Time left for charging
+        time_left=$(acpi | awk '{print $5}')
+        echo -e "Status: ${color}$status\e[0m"
+        echo "Time left: $time_left"
+    fi
+    
+    if [ "$status" = "discharging" ]; then
+        color="\e[31m"  # Red for discharging
+        # Time left for discharging
+        time_left=$(acpi | awk '{print $5}')
+        echo -e "Status: ${color}$status\e[0m"
+        echo "Time left: $time_left"
+    fi
+}
