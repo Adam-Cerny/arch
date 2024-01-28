@@ -1,0 +1,18 @@
+vol() {
+    if [ -n "$1" ]; then
+        # If argument is provided, adjust the volume
+        amixer -q sset Master "$1%"
+    else
+        # If no argument, print the current volume
+        current_volume=$(amixer get Master | awk '/Mono:/{print $4}' | tr -d '[]%')
+
+        # Set color based on current volume
+        if [ "$current_volume" = "0" ]; then
+            color="\e[31m"  # Red for 0% volume
+        else
+            color="\e[32m"  # Green for more than 0% volume
+        fi
+
+        echo -e "Current volume: ${color}$current_volume%\e[0m"
+    fi
+}
