@@ -1,0 +1,7 @@
+mytime() {
+    echo -e "$(date +"%T")" # Print time
+    echo -e "$(date +"%A %d.%m.%Y")" # Print day of week and date (D.M.Y)
+}
+
+# Rewrite the default time alias
+alias time=mytime
